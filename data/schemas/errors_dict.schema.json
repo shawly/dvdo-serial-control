@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": {
+        "$ref": "#/definitions/iScanErrors"
+    },
+    "definitions": {
+        "iScanErrors": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "description",
+                "name"
+            ],
+            "title": "iScanErrors"
+        }
+    }
+}

@@ -1,0 +1,1518 @@
+# yaml-language-server: $schema=./schemas/settings_dict.schema.json
+---
+"21":
+  name: Brightness
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - -50
+    - 50
+  default: "0"
+"22":
+  name: Contrast
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - -50
+    - 50
+  default: "0"
+"23":
+  name: Saturation
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - -50
+    - 50
+  default: "0"
+"24":
+  name: Hue
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - -50
+    - 50
+  default: "0"
+"25":
+  name: Sharpness
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 7
+  default: "0"
+"27":
+  name: Y/C Delay
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - -50
+    - 50
+  default: "0"
+"28":
+  name: CUE-Correction
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+    "2":
+      name: Auto
+  default: "2"
+"40":
+  name: Horizontal Zoom
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 100
+  default: "0"
+"41":
+  name: Vertical Zoom
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 100
+  default: "0"
+"42":
+  name: Horizontal Pan
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  default: "0"
+"43":
+  name: Vertical Pan
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  default: "0"
+"44":
+  name: Horizontal Borders
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 889
+  default: "0"
+"45":
+  name: Vertical Borders
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 249
+  default: "0"
+"46":
+  name: Overscan
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 96
+  default: "0"
+"47":
+  name: Line Offset
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 30
+  default: "0"
+"48":
+  name: VCR Mode
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+    "2":
+      name: Auto
+  default: "2"
+"49":
+  name: Deinterlacing
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: Film Bias Mode
+    "1":
+      name: Video Mode
+    "2":
+      name: 2:2 Even Mode
+      compatibility:
+        - vp50
+        - vp50pro
+    "3":
+      name: 2:2 Odd Mode
+      compatibility:
+        - vp50
+        - vp50pro
+    "4":
+      name: Game Mode 1
+      compatibility:
+        - vp50
+        - vp50pro
+    "5":
+      name: Game Mode 2
+      compatibility:
+        - vp50
+        - vp50pro
+    "6":
+      name: Auto
+    "7":
+      name: "?"
+    "8":
+      name: Forced 3:2 Mode
+      compatibility:
+        - vp50
+        - vp50pro
+    "9":
+      name: Field-Scale
+      compatibility:
+        - vp50
+    "10":
+      name: Forced 2:2 Mode
+      compatibility:
+        - vp50
+        - vp50pro
+  default: "6"
+"50":
+  name: Active AR
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: 1.33:1 [4:3]
+    "2":
+      name: 1.55:1
+    "3":
+      name: 1.66:1
+    "4":
+      name: 1.78:1 [16:9]
+    "5":
+      name: 1.85:1
+    "6":
+      name: 2.35:1
+    "7":
+      name: User
+  default: "4"
+"52":
+  name: Save Display Profile
+  group: Output Setup
+  permission:
+    - w
+  range:
+    "0":
+      name: User
+    "1":
+      name: Profile 1
+    "2":
+      name: Profile 2
+    "3":
+      name: Profile 3
+    "4":
+      name: Profile 4
+    "5":
+      name: Profile 5
+    "6":
+      name: Profile 6
+    "7":
+      name: Profile 7
+    "8":
+      name: Profile 8
+    "9":
+      name: Profile 9
+    "10":
+      name: Profile 10
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"53":
+  name: Save Presets
+  group: Input Aspect Ratio
+  permission:
+    - w
+  range:
+    "1":
+      name: Preset 1
+    "2":
+      name: Preset 2
+    "3":
+      name: Preset 3
+    "4":
+      name: Preset 4
+    "5":
+      name: Preset 5
+    "6":
+      name: Preset 6
+    "7":
+      name: Preset 7
+    "8":
+      name: Preset 8
+    "9":
+      name: Preset 9
+    "10":
+      name: Preset 10
+"60":
+  name: Analog/Digital
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: BNC (Analog)
+    "2":
+      name: HDMI (Digital)
+  default: "2"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"61":
+  name: Format
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: 480p
+    "2":
+      name: 540p
+    "3":
+      name: 576p
+    "4":
+      name: 720p-50
+    "5":
+      name: 720p-60
+    "6":
+      name: 1080i-50
+    "7":
+      name: 1080i-60
+    "8":
+      name: 1080p-50
+    "9":
+      name: 1080p-60
+    "10":
+      name: VGA
+    "11":
+      name: SVGA
+    "12":
+      name: XGA
+    "13":
+      name: SXGA
+    "14":
+      name: 852x480
+    "15":
+      name: 852x576
+    "16":
+      name: 1366x768
+    "17":
+      name: 1280x768
+    "18":
+      name: 1024x1024
+    "19":
+      name: 1024x852
+    "20":
+      name: 1024x576
+    "21":
+      name: 848x600
+    "22":
+      name: 1365x1024
+    "23":
+      name: 1400x1050
+    "24":
+      name: 1400x788
+    "25":
+      name: 960x540
+    "26":
+      name: 1280x960
+    "27":
+      name: 1440x960
+    "28":
+      name: 1440x1152
+    "29":
+      name: User
+    "30":
+      name: 1080p-48
+      compatibility:
+        - vp50pro
+    "31":
+      name: 1360x768 (1)
+    "32":
+      name: 1360x768 (2)
+    "33":
+      name: 1366x768 (2)
+    "34":
+      name: 848x480
+    "35":
+      name: 1365x768
+    "36":
+      name: 1024x768
+    "37":
+      name: 1080p-60
+    "38":
+      name: 1080p-24
+  default: "1"
+"62":
+  name: Horizontal Size
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - 640
+    - 1920
+  default: "720"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"63":
+  name: Horizontal Front Porch
+  group: Output Setup
+  permission:
+    - r
+    - w
+  default: "16"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"64":
+  name: Horizontal Sync Width
+  group: Output Setup
+  permission:
+    - r
+    - w
+  default: "63"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"65":
+  name: Horizontal Back Porch
+  group: Output Setup
+  permission:
+    - r
+    - w
+  default: "59"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"66":
+  name: Vertical Size
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - 480
+    - 1080
+  default: "480"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"67":
+  name: Vertical Front Porch
+  group: Output Setup
+  permission:
+    - r
+    - w
+  default: "6"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"68":
+  name: Vertical Sync Width
+  group: Output Setup
+  permission:
+    - r
+    - w
+  default: "6"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"69":
+  name: Vertical Back Porch
+  group: Output Setup
+  permission:
+    - r
+    - w
+  default: "33"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+"70":
+  name: Unlocked Frame Rate [60Hz]
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - 24
+    - 75
+  default: "59.94"
+"80":
+  name: Test Patterns
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: Frame/Geometry
+    "2":
+      name: Brightness/Contrast
+    "3":
+      name: Checkerboard
+    "4":
+      name: Vertical Lines
+    "5":
+      name: Horizontal Lines
+    "6":
+      name: Judder
+    "7":
+      name: 75% Color Bars
+    "8":
+      name: 100% Color Bars
+    "9":
+      name: 10 IRE Gray Window
+    "10":
+      name: 20 IRE Gray Window
+    "11":
+      name: 30 IRE Gray Window
+    "12":
+      name: 40 IRE Gray Window
+    "13":
+      name: 50 IRE Gray Window
+    "14":
+      name: 60 IRE Gray Window
+    "15":
+      name: 70 IRE Gray Window
+    "16":
+      name: 80 IRE Gray Window
+    "17":
+      name: 90 IRE Gray Window
+    "18":
+      name: 100 IRE Gray Window
+    "19":
+      name: Gray Ramp
+    "20":
+      name: Coarse Cross-Hatch
+    "21":
+      name: Fine Cross-Hatch
+    "22":
+      name: Focus
+    "23":
+      name: Half-Transparent B/White
+    "24":
+      name: Half-Transparent 7-Color Bars 75%
+    "25":
+      name: Half-Transparent 7-Color Bars 100%
+    "26":
+      name: Half Transparent 8-Color Bars 75%
+    "27":
+      name: Half Transparent 8-Color Bars 100%
+    "28":
+      name: White
+    "29":
+      name: Red
+    "30":
+      name: Green
+    "31":
+      name: Blue
+    "32":
+      name: Cyan
+    "33":
+      name: Magenta
+    "34":
+      name: Yellow
+    "35":
+      name: Black
+  default: "1"
+"81":
+  name: Auto Priority
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    - 1
+    - 12
+"83":
+  name: Auto Standby
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+"85":
+  name: User Mode
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: Normal
+    "2":
+      name: Advanced
+  default: "0"
+"86":
+  name: HDCP Compatibility
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "1"
+"87":
+  name: Color Space
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: RGB
+    "2":
+      name: YPbPr
+    "3":
+      name: YCbCr 4:2:2
+    "4":
+      name: YCbCr 4:4:4
+    "5":
+      name: Auto
+  default: "5"
+"89":
+  name: Screen AR
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: "4:3"
+    "2":
+      name: "16:9"
+    "3":
+      name: 21:9 (2.35:1)
+    "4":
+      name: User
+    "5":
+      name: Auto
+  default: "2"
+4C:
+  name: Input Select
+  group: Input Select
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: Video 1
+    "2":
+      name: Video 2
+    "3":
+      name: S-Video 1
+    "4":
+      name: S-Video 2
+    "5":
+      name: Component 1
+    "6":
+      name: Component 2
+    "7":
+      name: RGBHV/Component
+      compatibility:
+        - vp30
+        - vp50
+        - vp50pro
+    "8":
+      name: HDMI 1
+    "9":
+      name: HDMI 2
+    "10":
+      name: HDMI 3
+    "11":
+      name: HDMI 4
+      compatibility:
+        - vp30
+        - vp50
+        - vp50pro
+    "12":
+      name: SD/HD-SDI 1
+      compatibility:
+        - vp30
+        - vp50
+        - vp50pro
+    "13":
+      name: Auto
+    "14":
+      name: SD/HD-SDI 2
+      compatibility:
+        - vp50pro
+  default: "5"
+4D:
+  name: Audio Input Select
+  group: Input Select
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+4E:
+  name: Frame AR
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: "4:3"
+    "2":
+      name: "16:9"
+  default: "2"
+A6:
+  name: Panorama
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+  compatibility:
+    - vp50
+    - vp50pro
+E1:
+  name: Presets
+  group: Input Aspect Ratio
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: User
+    "1":
+      name: 4:3 Full Frame
+    "2":
+      name: Letterbox
+    "3":
+      name: 16:9 Full Frame
+    "4":
+      name: Preset 1
+    "5":
+      name: Preset 2
+    "6":
+      name: Preset 3
+    "7":
+      name: Preset 4
+    "8":
+      name: Preset 5
+    "9":
+      name: Preset 6
+    "10":
+      name: Preset 7
+    "11":
+      name: Preset 8
+    "12":
+      name: Preset 9
+    "13":
+      name: Preset 10
+    "14":
+      name: 4:3 Stretch
+      compatibility:
+        - vp50
+        - vp50pro
+  default: "1"
+CA:
+  name: Mosquito Noise Reduction
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: Low
+    "2":
+      name: Medium
+    "3":
+      name: High
+  default: "0"
+  compatibility:
+    - vp50pro
+F0:
+  name: Input Level
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: Video
+    "2":
+      name: PC
+    "3":
+      name: Auto
+  default: "3"
+B6:
+  name: PReP
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+  compatibility:
+    - vp50
+    - vp50pro
+BB:
+  name: Cadence Detect
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+  compatibility:
+    - vp50pro
+A7:
+  name: Pass Through
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+B0:
+  name: Auto AR
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+B1:
+  name: Auto Color Space
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+4A:
+  name: Audio Input
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: Audio1
+    "2":
+      name: Audio2
+    "3":
+      name: Audio3
+    "4":
+      name: Audio4
+    "5":
+      name: Stereo
+    "6":
+      name: HDMI
+4B:
+  name: AV LipSync
+  group: Input Adjustment Controls
+  permission:
+    - r
+    - w
+  range:
+    - -73
+    - 150
+  default: "0"
+C8:
+  name: Fine Detail
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  default: "0"
+  compatibility:
+    - vp50pro
+C9:
+  name: Edge Enhancement
+  group: Picture Controls
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  default: "0"
+  compatibility:
+    - vp50pro
+A0:
+  name: Test Patterns On/Off
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+EC:
+  name: Power LED Normal
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: Dim
+    "2":
+      name: Medium
+    "3":
+      name: Bright
+  default: "3"
+ED:
+  name: Power LED Reduced
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: Dim
+    "2":
+      name: Medium
+    "3":
+      name: Bright
+  default: "1"
+A3:
+  name: Serial Port Rate
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: "4800"
+    "2":
+      name: "9600"
+    "3":
+      name: "14400"
+    "4":
+      name: "19200"
+    "5":
+      name: "38400"
+    "6":
+      name: "57600"
+  default: "6"
+AC:
+  name: Factory Default
+  group: Configuration Controls
+  permission:
+    - w
+  range:
+    "0":
+      name: Reset
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+  disabled: true
+AD:
+  name: Software Update
+  group: Configuration Controls
+  permission:
+    - w
+  range:
+    "0":
+      name: Reset
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+  disabled: true
+B8:
+  name: "12V Trigger Levels #1"
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: Normal
+    "2":
+      name: Negative
+  compatibility:
+    - vp50pro
+B9:
+  name: "12V Trigger Levels #2"
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: Normal
+    "2":
+      name: Negative
+  compatibility:
+    - vp50pro
+A5:
+  name: Information
+  group: Configuration Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+6A:
+  name: Display AR
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: "4:3"
+    "2":
+      name: "5:4"
+    "3":
+      name: "16:9"
+    "4":
+      name: "21:9"
+    "5":
+      name: User
+    "6":
+      name: Auto
+  default: "3"
+B7:
+  name: Lens
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: None
+    "1":
+      name: Mode 1
+    "2":
+      name: Mode 1 “Auto”
+    "3":
+      name: Mode 2
+  default: "0"
+  compatibility:
+    - vp50pro
+8A:
+  name: Screen AR User Value
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - 1
+    - 3
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+8B:
+  name: Underscan
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - 0
+    - 100
+  default: "0"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+8C:
+  name: Horizontal Image Shift
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - -30
+    - 30
+  default: "0"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+8D:
+  name: Vertical Image Shift
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - -30
+    - 30
+  default: "0"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+6B:
+  name: Sync Type
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: Bi-Level (Req. YUV Color Spc)
+    "2":
+      name: Tri-Level (Req. YUV Color Spc)
+    "3":
+      name: Composite
+    "4":
+      name: H+V+ (Req. RGB Color Spc)
+    "5":
+      name: H+V- (Req. RGB Color Spc)
+    "6":
+      name: H-V+ (Req. RGB Color Spc)
+    "7":
+      name: H-V- (Req. RGB Color Spc)
+    "8":
+      name: Auto
+  default: "1"
+6C:
+  name: Color Space
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: RGB
+    "2":
+      name: YPbPr
+    "3":
+      name: YCbCr 4:2:2
+    "4":
+      name: YCbCr 4:4:4
+    "5":
+      name: Auto
+  default: "1"
+E5:
+  name: Color Gamut (YCbCr)
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: BT.601
+    "2":
+      name: BT.709
+  default: "1"
+  compatibility:
+    - vp50pro
+E6:
+  name: Output Level (Digital)
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: Video
+    "2":
+      name: PC
+    "3":
+      name: Auto
+  default: "1"
+6D:
+  name: Frame Rate [50Hz]
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: Unlocked
+    "1":
+      name: 25Hz Locked
+    "2":
+      name: 50Hz Locked
+    "3":
+      name: 75Hz Locked
+  default: "1"
+6E:
+  name: Frame Rate [60Hz]
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: Unlocked
+    "1":
+      name: 24Hz Locked
+    "2":
+      name: 48Hz Locked
+    "3":
+      name: 60Hz Locked
+    "4":
+      name: 72Hz Locked
+  default: "1"
+6F:
+  name: Unlocked Frame Rate [50Hz]
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - 25
+    - 75
+  default: "50.00"
+4F:
+  name: Border Level
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - -16
+    - 100
+  default: "0"
+C4:
+  name: Output Picture Controls Presets
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: ISF Day Normal
+    "2":
+      name: ISF Day Bright
+    "3":
+      name: ISF Night
+    "4":
+      name: Preset 1
+    "5":
+      name: Preset 2
+  compatibility:
+    - vp50pro
+C0:
+  name: Output Picture Controls Brightness
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  compatibility:
+    - vp50pro
+C1:
+  name: Output Picture Controls Contrast
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  compatibility:
+    - vp50pro
+C2:
+  name: Output Picture Controls Saturation
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  compatibility:
+    - vp50pro
+C3:
+  name: Output Picture Controls Hue
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    - -100
+    - 100
+  compatibility:
+    - vp50pro
+EA:
+  name: HDCP Display Detect
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "1"
+C7:
+  name: "12V Trigger #2"
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+    "2":
+      name: Lens
+  default: "0"
+  compatibility:
+    - vp50pro
+BA:
+  name: Audio Select
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "1":
+      name: S/PDIF
+    "2":
+      name: HDMI
+  compatibility:
+    - vp50pro
+E0:
+  name: Display Profile
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: User
+    "1":
+      name: Profile 1
+    "2":
+      name: Profile 2
+    "3":
+      name: Profile 3
+    "4":
+      name: Profile 4
+    "5":
+      name: Profile 5
+    "6":
+      name: Profile 6
+    "7":
+      name: Profile 7
+    "8":
+      name: Profile 8
+    "9":
+      name: Profile 9
+    "10":
+      name: Profile 10
+  default: "0"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+E7:
+  name: Auto Display Profile
+  group: Output Setup
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "0"
+  compatibility:
+    - vp30
+    - vp50
+    - vp50pro
+A1:
+  name: Power
+  group: Miscellaneous Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: "Off"
+    "1":
+      name: "On"
+  default: "1"
+A2:
+  name: Menu Navigation
+  group: Miscellaneous Controls
+  permission:
+    - w
+  range:
+    "1":
+      name: Left
+    "2":
+      name: Right
+    "3":
+      name: Up
+    "4":
+      name: Down
+    "5":
+      name: Menu
+    "6":
+      name: Enter
+    "7":
+      name: Exit
+A4:
+  name: Curtain Control
+  group: Miscellaneous Controls
+  permission:
+    - r
+    - w
+  range:
+    "0":
+      name: Curtain Open
+    "1":
+      name: Curtain Close
+  default: "0"
+A8:
+  name: Product Name
+  group: Miscellaneous Controls
+  range:
+    iScan_VP50Pro:
+      name: VP50Pro
+    iScan_VP50:
+      name: VP50
+    iScan_VP30:
+      name: VP30
+    iScan_VP20:
+      name: VP20
+  permission:
+    - r
+A9:
+  name: Software Version
+  group: Miscellaneous Controls
+  permission:
+    - r
+AE:
+  name: System Reset
+  group: Miscellaneous Controls
+  permission:
+    - w
+  range:
+    "0":
+      name: "Off"

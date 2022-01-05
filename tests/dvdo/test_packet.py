@@ -1,10 +1,10 @@
 import unittest
+from logging import WARNING
 
-from dvdo.packet import (CommandPacket, ErrorPacket, PacketFactory,
-                         QueryPacket, ReplyPacket, ResponsePacket)
+from dvdo.packet import ErrorPacket, PacketFactory, ReplyPacket, ResponsePacket
 
 
-class TestDVDOPackets(unittest.TestCase):
+class TestPacketFactory(unittest.TestCase):
     def setUp(self):
         self.packet_factory = PacketFactory()
 
@@ -72,13 +72,17 @@ class TestDVDOPackets(unittest.TestCase):
 
     def test_serialize_query_packet(self):
         response_mock = b'\x02200000\x000\x0000\x03'
-        with self.assertRaises(ValueError):
+        with self.assertLogs("dvdo.packet", level=WARNING) as cm:
             self.packet_factory.create_from_response(response_mock)
+        self.assertEqual(cm.output, [
+                         'WARNING:dvdo.packet:Packet seems to be a query packet and should not be returned as a response!'])
 
-    def test_serialize_query_packet(self):
+    def test_serialize_command_packet(self):
         response_mock = b'\x02300000\x000\x0000\x03'
-        with self.assertRaises(ValueError):
+        with self.assertLogs("dvdo.packet", level=WARNING) as cm:
             self.packet_factory.create_from_response(response_mock)
+        self.assertEqual(cm.output, [
+                         'WARNING:dvdo.packet:Packet seems to be a command packet and should not be returned as a response!'])
 
     def test_unknown_bytearray(self):
         response_mock = b'\x00'

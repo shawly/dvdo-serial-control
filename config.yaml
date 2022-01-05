@@ -1,0 +1,14 @@
+serial:
+  port: "/dev/ttyUSB0"
+  baudrate: 57600
+  timeout: 5
+
+mqtt:
+  server: ''
+  port: ''
+
+global:
+  lang: en
+
+logging:
+  level: info

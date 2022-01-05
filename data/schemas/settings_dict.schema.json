@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/iScanSettings",
+  "definitions": {
+    "iScanSettings": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/Setting"
+      },
+      "title": "iScanSettings"
+    },
+    "Setting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "group": {
+          "$ref": "#/definitions/Group"
+        },
+        "permission": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Permission"
+          }
+        },
+        "range": {
+          "$ref": "#/definitions/RangeUnion"
+        },
+        "default": {
+          "type": "string"
+        },
+        "compatibility": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Compatibility"
+          }
+        },
+        "disabled": {
+          "type": "boolean"
+        }
+      },
+      "required": ["group", "name", "permission"],
+      "title": "Setting"
+    },
+    "RangeUnion": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/ValueRange"
+          }
+        }
+      ],
+      "title": "RangeUnion"
+    },
+    "ValueRange": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "compatibility": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Compatibility"
+          }
+        }
+      },
+      "required": ["name"],
+      "title": "ValueRange"
+    },
+    "Compatibility": {
+      "type": "string",
+      "enum": ["vp30", "vp50", "vp50pro"],
+      "title": "Compatibility"
+    },
+    "Group": {
+      "type": "string",
+      "enum": [
+        "Input Select",
+        "Picture Controls",
+        "Input Aspect Ratio",
+        "Input Adjustment Controls",
+        "Output Setup",
+        "Configuration Controls",
+        "Miscellaneous Controls"
+      ],
+      "title": "Group"
+    },
+    "Permission": {
+      "type": "string",
+      "enum": ["r", "w"],
+      "title": "Permission"
+    }
+  }
+}
