@@ -1,0 +1,13 @@
+{
+  "1": "Invalid checksum. This error means either the checksum you sent was wrong or the transmission was bad due to interference (double check your checksum calculation or your serial link).",
+  "2": "Invalid Incoming Packet ID (i.e. Command = \"3\"&\"0\", Query = \"2\"&\"0\", others are invalid when sent to the iScan)",
+  "3": "Invalid Setting (i.e. Power = \"A\"&\"1\") if you get this error, make sure that the command is supported by the model you are using.",
+  "4": "Range Error (i.e. Power on = \"1\", power off = \"0\") if you get this error you tried to set a value to the control which is either out of range or not supported.",
+  "5": "Bad Packet Character (i.e. STX, ETX, NUL) a valid ASCII character value may have been used in the wrong place - double check your syntax. Otherwise, ensure that only numbers, or punctuation (\".\", \"+\", or \"-\") was used.",
+  "6": "Last byte of packet was not received within 100 milliseconds - if this happens, first make sure that the link is good. Then, ensure that your control device is waiting for a complete response packet before sending another packet. If your controller does not \"listen\" to the flow control pins (DSR/DTR look at section 2.1) the buffer may over-flow causing bytes to be lost. If no RS-232 return path is being used, pace your commands to about 10 commands every second.",
+  "7": "Unterminated Data Value. This means you missed a \"NUL\" after a value and went straight to the \"ETX\" - check your syntax.",
+  "8": "Bad Data - If you get this response, first check your serial link, then check the table in Section 3 to ensure you sent the right type of value. If you send a \"5E\" for a control expecting a number like \"1.453\", you will get this type of error response.",
+  "9": "Too many or too few data characters. This error appears if your packet has the wrong byte counts value, or you don’t have all of the data in the string.",
+  "10": "The setting is not writable (i.e. command for \"Device Name\"), this will be your response if you attempt to write to a query only Command ID",
+  "11": "The packet is larger than the maximum packet size. You should never see this error - we do not have any controls which are at the time of this writing even close to the maximum size. If this error comes back - check your serial link and syntax. If you are transmitting more that 50 bytes in a single command you are probably doing something wrong!!"
+}
