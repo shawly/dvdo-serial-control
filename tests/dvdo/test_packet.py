@@ -15,6 +15,10 @@ class TestPacketFactory(unittest.TestCase):
         self.assertEqual(packet.as_bytes(), b'\x022003A1\x00\x03')
         self.assertEqual(packet.as_hex(), '023230303341310003')
 
+    def test_invalid_setting_for_query(self):
+        with self.assertRaises(ValueError):
+            self.packet_factory.create_query('GZ')
+
     def test_command_request_packet(self):
         packet = self.packet_factory.create_command('21', '-10')
 
@@ -22,6 +26,14 @@ class TestPacketFactory(unittest.TestCase):
                          'STX 3 0 0 7 2 1 NULL - 1 0 NULL ETX')
         self.assertEqual(packet.as_bytes(), b'\x02300721\x00-10\x00\x03')
         self.assertEqual(packet.as_hex(), '02333030373231002d31300003')
+
+    def test_invalid_setting_for_command(self):
+        with self.assertRaises(ValueError):
+            self.packet_factory.create_command('GG', '1')
+
+    def test_invalid_value_for_command(self):
+        with self.assertRaises(ValueError):
+            self.packet_factory.create_command('A1', '$+2/')
 
     def test_query_reply_packet(self):
         response_mock = b'\x022107A1\x001.2\x006D\x03'

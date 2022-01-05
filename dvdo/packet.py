@@ -1,14 +1,16 @@
 
 import daiquiri
-import yaml
 
-from dvdo import constants
-
-# load config
-_config = yaml.safe_load(open("config.yaml"))
+from dvdo.constants import (ETX, NULL, STX, TYPE_COMMAND_PACKET,
+                            TYPE_ERROR_PACKET, TYPE_QUERY_PACKET,
+                            TYPE_REPLY_PACKET, TYPE_RESPONSE_PACKET,
+                            UNDERSCORE)
+from dvdo.utils import (config, error_matcher, errors_dict, hex_matcher,
+                        reply_matcher, response_matcher, settings_dict,
+                        value_matcher)
 
 # initialize logger
-daiquiri.setup(level=_config["logging"]["level"].upper())
+daiquiri.setup(level=config["logging"]["level"].upper())
 logger = daiquiri.getLogger(__name__)
 
 
@@ -36,7 +38,7 @@ class Packet(object):
         self.__dtc1__ = _data_count_split[0]
         self.__dtc2__ = _data_count_split[1]
 
-        if (checksum is not None and len(checksum) == 2):
+        if (checksum is not None and hex_matcher.match(checksum)):
             self.checksum = checksum
             split_checksum = list(checksum)
             self.__cs1__ = split_checksum[0]
@@ -52,7 +54,7 @@ class Packet(object):
         logger.debug("Initialized packet: %s", self)
 
     @classmethod
-    def fromraw(self, raw: bytes):
+    def from_raw_response(self, raw: bytes):
         """Initializes the Packet object from raw bytes returned by the DVDO device
 
         Args:
@@ -73,8 +75,8 @@ class Packet(object):
         logger.debug("Returning bytes %s as ascii string", self._bytes)
         if (self._bytes is not None):
             _string = self._bytes.decode()
-            CHARMAP = [(constants.NULL.decode(), "NULL"),
-                       (constants.STX.decode(), "STX"), (constants.ETX.decode(), "ETX")]
+            CHARMAP = [(NULL.decode(), "NULL"),
+                       (STX.decode(), "STX"), (ETX.decode(), "ETX")]
             _map = dict((c, r) for chars, r in CHARMAP for c in list(chars))
             return " ".join(_map.get(c, c) for c in _string)
         else:
@@ -94,10 +96,10 @@ class Packet(object):
         if (self._ascii is not None):
             _replace_whitespace = self._ascii.replace(" ", "")
             _replace_stx = _replace_whitespace.replace(
-                "STX", constants.STX.decode())
+                "STX", STX.decode())
             _replace_null = _replace_stx.replace(
-                "NULL", constants.NULL.decode())
-            _replace_etx = _replace_null.replace("ETX", constants.ETX.decode())
+                "NULL", NULL.decode())
+            _replace_etx = _replace_null.replace("ETX", ETX.decode())
             return _replace_etx.encode()
         else:
             raise AttributeError(
@@ -142,7 +144,7 @@ class ErrorPacket(Packet):
     def __init__(self, error_code, data_count, checksum):
         self.error_code = error_code
         try:
-            self.error_description = constants.ERRORS[error_code]
+            self.error_description = errors_dict[error_code]
         except KeyError:
             self.error_description = "unknown"
 
@@ -155,8 +157,8 @@ class ErrorPacket(Packet):
         Args:
             raw (bytes): A raw byte string returned from the serial connection
         """
-        super().fromraw(raw)
-        match = constants.ERROR_REGEX.search(raw)
+        super().from_raw_response(raw)
+        match = error_matcher.search(raw)
         _data_count = int(match.group("cnt"))
         _error = match.group("err").decode()
         _checksum = match.group("chk").decode()
@@ -198,8 +200,8 @@ class ResponsePacket(Packet):
         Args:
             raw (bytes): A raw byte string returned from the serial connection
         """
-        super().fromraw(raw)
-        match = constants.RESPONSE_REGEX.search(raw)
+        super().from_raw_response(raw)
+        match = response_matcher.search(raw)
         _data_count = int(match.group("cnt"))
         _acknowlege = match.group("ack").decode()
         _command = match.group("exc").decode()
@@ -234,13 +236,13 @@ class ReplyPacket(Packet):
         self.setting = setting
         self.value = value
         try:
-            self.setting_description = constants.SETTINGS[setting]["name"]
+            self.setting_description = settings_dict[setting]["name"]
         except KeyError:
-            self.setting_description = "unknown"
+            self.setting_description = ""
         try:
-            self.value_description = constants.SETTINGS[setting]["range"][value]
+            self.value_description = settings_dict[setting]["range"][value]
         except KeyError:
-            self.value_description = "unknown"
+            self.value_description = ""
         super().__init__(data_count, checksum)
 
     @classmethod
@@ -250,12 +252,12 @@ class ReplyPacket(Packet):
         Args:
             raw (bytes): A raw byte string returned from the serial connection
         """
-        super().fromraw(raw)
-        match = constants.REPLY_REGEX.search(raw)
+        super().from_raw_response(raw)
+        match = reply_matcher.search(raw)
         _data_count = int(match.group("cnt"))
         _setting = match.group("set").decode()
         _value = match.group("val").replace(
-            constants.NULL, constants.UNDERSCORE).decode()
+            NULL, UNDERSCORE).decode()
         _checksum = match.group("chk").decode()
         return self(_setting, _value, _data_count, _checksum)
 
@@ -285,7 +287,7 @@ class QueryPacket(Packet):
     """
 
     def __init__(self, setting, checksum=None):
-        if (setting is not None and len(setting) == 2):
+        if (hex_matcher.match(setting)):
             _split_setting = list(setting)
             self.setting = setting
             self.__id1__ = _split_setting[0]
@@ -332,7 +334,7 @@ class CommandPacket(Packet):
     """
 
     def __init__(self, setting, value, checksum=None):
-        if (setting is not None and len(setting) == 2):
+        if (setting is not None and hex_matcher.match(setting)):
             self.setting = setting
             _split_setting = list(setting)
             self.__id1__ = _split_setting[0]
@@ -340,12 +342,13 @@ class CommandPacket(Packet):
         else:
             raise ValueError("setting must consist of two digits!")
 
-        if (value is not None and len(value) == 1):
+        if (value is not None and len(value) == 1 and value_matcher.match(value)):
             self.value = value
-        elif (value is not None and len(value) > 1):
+        elif (value is not None and len(value) > 1 and value_matcher.match(value)):
             self.value = " ".join(list(value))
         else:
-            raise ValueError("value cannot be empty")
+            raise ValueError(
+                "value has to be at least 1 byte in length and contain only letters, digits, dots or hyphens")
 
         # data count is value length + 4 bytes
         super().__init__(len(value) + 4, checksum)
@@ -409,25 +412,25 @@ class PacketFactory:
             ErrorPacket: a packet returned if the device responds with an error
         """
         logger.debug("Creating packet from bytearray %s...", raw)
-        if (raw[0:1] != constants.STX and raw[len(raw)-1:len(raw)] != constants.ETX):
+        if (raw[0:1] != STX and raw[len(raw)-1:len(raw)] != ETX):
             raise ValueError(
                 "invalid bytearray, it must start with STX (\x02) and end with ETX (\x03):", raw)
 
         _type = raw[1:3].decode()
-        if (_type == constants.TYPE_REPLY_PACKET):
+        if (_type == TYPE_REPLY_PACKET):
             logger.debug("Packet seems to be reply packet, creating instance.")
             return ReplyPacket.fromraw(raw)
-        elif (_type == constants.TYPE_RESPONSE_PACKET):
+        elif (_type == TYPE_RESPONSE_PACKET):
             logger.debug(
                 "Packet seems to be response packet, creating instance.")
             return ResponsePacket.fromraw(raw)
-        elif (_type == constants.TYPE_ERROR_PACKET):
+        elif (_type == TYPE_ERROR_PACKET):
             logger.debug("Packet seems to be error packet, creating instance.")
             return ErrorPacket.fromraw(raw)
-        elif (_type == constants.TYPE_QUERY_PACKET):
+        elif (_type == TYPE_QUERY_PACKET):
             logger.warning(
                 "Packet seems to be a query packet and should not be returned as a response!")
-        elif (_type == constants.TYPE_COMMAND_PACKET):
+        elif (_type == TYPE_COMMAND_PACKET):
             logger.warning(
                 "Packet seems to be a command packet and should not be returned as a response!")
         else:
