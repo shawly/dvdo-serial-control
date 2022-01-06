@@ -1,14 +1,13 @@
-serial:
-  port: "/dev/ttyUSB0"
-  baudrate: 57600
-  timeout: 5
+---
+language: en
 
-mqtt:
-  server: ''
-  port: ''
-
-global:
-  lang: en
+devices:
+  vp50pro:
+    name: "VP50 Pro"
+    type: vp50pro
+    port: "/dev/ttyUSB0"
+    baudrate: 57600
+    timeout: 5
 
 logging:
-  level: info
+  level: debug

@@ -1,6 +1,7 @@
 # yaml-language-server: $schema=./schemas/settings_dict.schema.json
 ---
 "21":
+  unique_id: pc_brightness
   name: Brightness
   group: Picture Controls
   permission:
@@ -11,6 +12,7 @@
     - 50
   default: "0"
 "22":
+  unique_id: pc_contrast
   name: Contrast
   group: Picture Controls
   permission:
@@ -21,6 +23,7 @@
     - 50
   default: "0"
 "23":
+  unique_id: pc_saturation
   name: Saturation
   group: Picture Controls
   permission:
@@ -31,6 +34,7 @@
     - 50
   default: "0"
 "24":
+  unique_id: pc_hue
   name: Hue
   group: Picture Controls
   permission:
@@ -41,6 +45,7 @@
     - 50
   default: "0"
 "25":
+  unique_id: pc_sharpness
   name: Sharpness
   group: Picture Controls
   permission:
@@ -51,6 +56,7 @@
     - 7
   default: "0"
 "27":
+  unique_id: pc_yc_delay
   name: Y/C Delay
   group: Picture Controls
   permission:
@@ -61,6 +67,7 @@
     - 50
   default: "0"
 "28":
+  unique_id: pc_cue_correction
   name: CUE-Correction
   group: Picture Controls
   permission:
@@ -75,6 +82,7 @@
       name: Auto
   default: "2"
 "40":
+  unique_id: iar_horizontal_zoom
   name: Horizontal Zoom
   group: Input Aspect Ratio
   permission:
@@ -85,6 +93,7 @@
     - 100
   default: "0"
 "41":
+  unique_id: iar_vertical_zoom
   name: Vertical Zoom
   group: Input Aspect Ratio
   permission:
@@ -95,6 +104,7 @@
     - 100
   default: "0"
 "42":
+  unique_id: iar_horizontal_pan
   name: Horizontal Pan
   group: Input Aspect Ratio
   permission:
@@ -105,6 +115,7 @@
     - 100
   default: "0"
 "43":
+  unique_id: iar_vertical_pan
   name: Vertical Pan
   group: Input Aspect Ratio
   permission:
@@ -115,6 +126,7 @@
     - 100
   default: "0"
 "44":
+  unique_id: iar_horizontal_borders
   name: Horizontal Borders
   group: Input Aspect Ratio
   permission:
@@ -125,6 +137,7 @@
     - 889
   default: "0"
 "45":
+  unique_id: iar_vertical_borders
   name: Vertical Borders
   group: Input Aspect Ratio
   permission:
@@ -135,6 +148,7 @@
     - 249
   default: "0"
 "46":
+  unique_id: iac_overscan
   name: Overscan
   group: Input Adjustment Controls
   permission:
@@ -145,6 +159,7 @@
     - 96
   default: "0"
 "47":
+  unique_id: iac_line_offset
   name: Line Offset
   group: Input Adjustment Controls
   permission:
@@ -155,6 +170,7 @@
     - 30
   default: "0"
 "48":
+  unique_id: iac_vcr_mode
   name: VCR Mode
   group: Input Adjustment Controls
   permission:
@@ -169,6 +185,7 @@
       name: Auto
   default: "2"
 "49":
+  unique_id: iac_deinterlacing
   name: Deinterlacing
   group: Input Adjustment Controls
   permission:
@@ -219,6 +236,7 @@
         - vp50pro
   default: "6"
 "50":
+  unique_id: iar_active_ar
   name: Active AR
   group: Input Aspect Ratio
   permission:
@@ -241,6 +259,7 @@
       name: User
   default: "4"
 "52":
+  unique_id: os_save_display_profile
   name: Save Display Profile
   group: Output Setup
   permission:
@@ -273,6 +292,7 @@
     - vp50
     - vp50pro
 "53":
+  unique_id: iar_save_presets
   name: Save Presets
   group: Input Aspect Ratio
   permission:
@@ -299,6 +319,7 @@
     "10":
       name: Preset 10
 "60":
+  unique_id: os_analog_digital
   name: Analog/Digital
   group: Output Setup
   permission:
@@ -315,6 +336,7 @@
     - vp50
     - vp50pro
 "61":
+  unique_id: os_format
   name: Format
   group: Output Setup
   permission:
@@ -401,6 +423,7 @@
       name: 1080p-24
   default: "1"
 "62":
+  unique_id: os_horizontal_size
   name: Horizontal Size
   group: Output Setup
   permission:
@@ -415,6 +438,7 @@
     - vp50
     - vp50pro
 "63":
+  unique_id: os_horizontal_front_porch
   name: Horizontal Front Porch
   group: Output Setup
   permission:
@@ -426,6 +450,7 @@
     - vp50
     - vp50pro
 "64":
+  unique_id: os_horizontal_sync_width
   name: Horizontal Sync Width
   group: Output Setup
   permission:
@@ -437,6 +462,7 @@
     - vp50
     - vp50pro
 "65":
+  unique_id: os_horizontal_back_porch
   name: Horizontal Back Porch
   group: Output Setup
   permission:
@@ -448,6 +474,7 @@
     - vp50
     - vp50pro
 "66":
+  unique_id: os_vertical_size
   name: Vertical Size
   group: Output Setup
   permission:
@@ -462,6 +489,7 @@
     - vp50
     - vp50pro
 "67":
+  unique_id: os_vertical_front_porch
   name: Vertical Front Porch
   group: Output Setup
   permission:
@@ -473,6 +501,7 @@
     - vp50
     - vp50pro
 "68":
+  unique_id: os_vertical_sync_width
   name: Vertical Sync Width
   group: Output Setup
   permission:
@@ -484,6 +513,7 @@
     - vp50
     - vp50pro
 "69":
+  unique_id: os_vertical_back_porch
   name: Vertical Back Porch
   group: Output Setup
   permission:
@@ -495,6 +525,7 @@
     - vp50
     - vp50pro
 "70":
+  unique_id: os_unlocked_framerate_60hz
   name: Unlocked Frame Rate [60Hz]
   group: Output Setup
   permission:
@@ -505,6 +536,7 @@
     - 75
   default: "59.94"
 "80":
+  unique_id: cc_test_patterns
   name: Test Patterns
   group: Configuration Controls
   permission:
@@ -585,6 +617,7 @@
       name: Black
   default: "1"
 "81":
+  unique_id: iac_auto_priority
   name: Auto Priority
   group: Input Adjustment Controls
   permission:
@@ -594,6 +627,7 @@
     - 1
     - 12
 "83":
+  unique_id: cc_auto_standby
   name: Auto Standby
   group: Configuration Controls
   permission:
@@ -606,6 +640,7 @@
       name: "On"
   default: "0"
 "85":
+  unique_id: cc_user_mode
   name: User Mode
   group: Configuration Controls
   permission:
@@ -618,6 +653,7 @@
       name: Advanced
   default: "0"
 "86":
+  unique_id: iac_hdcp_compatibility
   name: HDCP Compatibility
   group: Input Adjustment Controls
   permission:
@@ -630,6 +666,7 @@
       name: "On"
   default: "1"
 "87":
+  unique_id: iac_color_space
   name: Color Space
   group: Input Adjustment Controls
   permission:
@@ -648,6 +685,7 @@
       name: Auto
   default: "5"
 "89":
+  unique_id: os_screen_ar
   name: Screen AR
   group: Output Setup
   permission:
@@ -666,6 +704,7 @@
       name: Auto
   default: "2"
 4C:
+  unique_id: is_input_select
   name: Input Select
   group: Input Select
   permission:
@@ -716,6 +755,7 @@
         - vp50pro
   default: "5"
 4D:
+  unique_id: is_audio_input_select
   name: Audio Input Select
   group: Input Select
   permission:
@@ -728,6 +768,7 @@
       name: "On"
   default: "0"
 4E:
+  unique_id: iar_frame_ar
   name: Frame AR
   group: Input Aspect Ratio
   permission:
@@ -740,6 +781,7 @@
       name: "16:9"
   default: "2"
 A6:
+  unique_id: iar_panorama
   name: Panorama
   group: Input Aspect Ratio
   permission:
@@ -755,6 +797,7 @@ A6:
     - vp50
     - vp50pro
 E1:
+  unique_id: iar_presets
   name: Presets
   group: Input Aspect Ratio
   permission:
@@ -796,6 +839,7 @@ E1:
         - vp50pro
   default: "1"
 CA:
+  unique_id: iac_mosquito_noise_reduction
   name: Mosquito Noise Reduction
   group: Input Adjustment Controls
   permission:
@@ -814,6 +858,7 @@ CA:
   compatibility:
     - vp50pro
 F0:
+  unique_id: iac_input_level
   name: Input Level
   group: Input Adjustment Controls
   permission:
@@ -828,6 +873,7 @@ F0:
       name: Auto
   default: "3"
 B6:
+  unique_id: iac_prep
   name: PReP
   group: Input Adjustment Controls
   permission:
@@ -843,6 +889,7 @@ B6:
     - vp50
     - vp50pro
 BB:
+  unique_id: iac_cadence_detect
   name: Cadence Detect
   group: Input Adjustment Controls
   permission:
@@ -857,6 +904,7 @@ BB:
   compatibility:
     - vp50pro
 A7:
+  unique_id: iac_passthrough
   name: Pass Through
   group: Input Adjustment Controls
   permission:
@@ -869,6 +917,7 @@ A7:
       name: "On"
   default: "0"
 B0:
+  unique_id: iac_auto_ar
   name: Auto AR
   group: Input Adjustment Controls
   permission:
@@ -881,6 +930,7 @@ B0:
       name: "On"
   default: "0"
 B1:
+  unique_id: iac_auto_color_space
   name: Auto Color Space
   group: Input Adjustment Controls
   permission:
@@ -893,6 +943,7 @@ B1:
       name: "On"
   default: "0"
 4A:
+  unique_id: iac_audio_input
   name: Audio Input
   group: Input Adjustment Controls
   permission:
@@ -914,6 +965,7 @@ B1:
     "6":
       name: HDMI
 4B:
+  unique_id: iac_av_lipsync
   name: AV LipSync
   group: Input Adjustment Controls
   permission:
@@ -924,6 +976,7 @@ B1:
     - 150
   default: "0"
 C8:
+  unique_id: pc_fine_detail
   name: Fine Detail
   group: Picture Controls
   permission:
@@ -936,6 +989,7 @@ C8:
   compatibility:
     - vp50pro
 C9:
+  unique_id: pc_edge_enhancement
   name: Edge Enhancement
   group: Picture Controls
   permission:
@@ -948,6 +1002,7 @@ C9:
   compatibility:
     - vp50pro
 A0:
+  unique_id: cc_test_patterns_on_off
   name: Test Patterns On/Off
   group: Configuration Controls
   permission:
@@ -960,6 +1015,7 @@ A0:
       name: "On"
   default: "0"
 EC:
+  unique_id: cc_power_led_normal
   name: Power LED Normal
   group: Configuration Controls
   permission:
@@ -976,6 +1032,7 @@ EC:
       name: Bright
   default: "3"
 ED:
+  unique_id: cc_power_led_reduced
   name: Power LED Reduced
   group: Configuration Controls
   permission:
@@ -992,6 +1049,7 @@ ED:
       name: Bright
   default: "1"
 A3:
+  unique_id: cc_serial_port_rate
   name: Serial Port Rate
   group: Configuration Controls
   permission:
@@ -1012,6 +1070,7 @@ A3:
       name: "57600"
   default: "6"
 AC:
+  unique_id: cc_factory_default
   name: Factory Default
   group: Configuration Controls
   permission:
@@ -1025,6 +1084,7 @@ AC:
     - vp50pro
   disabled: true
 AD:
+  unique_id: cc_software_update
   name: Software Update
   group: Configuration Controls
   permission:
@@ -1038,6 +1098,7 @@ AD:
     - vp50pro
   disabled: true
 B8:
+  unique_id: cc_12v_trigger_levels_1
   name: "12V Trigger Levels #1"
   group: Configuration Controls
   permission:
@@ -1051,6 +1112,7 @@ B8:
   compatibility:
     - vp50pro
 B9:
+  unique_id: cc_12v_trigger_levels_2
   name: "12V Trigger Levels #2"
   group: Configuration Controls
   permission:
@@ -1064,6 +1126,7 @@ B9:
   compatibility:
     - vp50pro
 A5:
+  unique_id: cc_information
   name: Information
   group: Configuration Controls
   permission:
@@ -1075,6 +1138,7 @@ A5:
     "1":
       name: "On"
 6A:
+  unique_id: os_display_ar
   name: Display AR
   group: Output Setup
   permission:
@@ -1095,6 +1159,7 @@ A5:
       name: Auto
   default: "3"
 B7:
+  unique_id: os_lens
   name: Lens
   group: Output Setup
   permission:
@@ -1113,6 +1178,7 @@ B7:
   compatibility:
     - vp50pro
 8A:
+  unique_id: os_screen_ar_user_value
   name: Screen AR User Value
   group: Output Setup
   permission:
@@ -1126,6 +1192,7 @@ B7:
     - vp50
     - vp50pro
 8B:
+  unique_id: os_underscan
   name: Underscan
   group: Output Setup
   permission:
@@ -1140,6 +1207,7 @@ B7:
     - vp50
     - vp50pro
 8C:
+  unique_id: os_horizontal_image_shift
   name: Horizontal Image Shift
   group: Output Setup
   permission:
@@ -1154,6 +1222,7 @@ B7:
     - vp50
     - vp50pro
 8D:
+  unique_id: os_vertical_image_shift
   name: Vertical Image Shift
   group: Output Setup
   permission:
@@ -1168,6 +1237,7 @@ B7:
     - vp50
     - vp50pro
 6B:
+  unique_id: os_sync_type
   name: Sync Type
   group: Output Setup
   permission:
@@ -1192,6 +1262,7 @@ B7:
       name: Auto
   default: "1"
 6C:
+  unique_id: os_color_space
   name: Color Space
   group: Output Setup
   permission:
@@ -1210,6 +1281,7 @@ B7:
       name: Auto
   default: "1"
 E5:
+  unique_id: os_color_gamut
   name: Color Gamut (YCbCr)
   group: Output Setup
   permission:
@@ -1224,6 +1296,7 @@ E5:
   compatibility:
     - vp50pro
 E6:
+  unique_id: os_output_level
   name: Output Level (Digital)
   group: Output Setup
   permission:
@@ -1238,6 +1311,7 @@ E6:
       name: Auto
   default: "1"
 6D:
+  unique_id: os_framerate_50hz
   name: Frame Rate [50Hz]
   group: Output Setup
   permission:
@@ -1254,6 +1328,7 @@ E6:
       name: 75Hz Locked
   default: "1"
 6E:
+  unique_id: os_framerate_60hz
   name: Frame Rate [60Hz]
   group: Output Setup
   permission:
@@ -1272,6 +1347,7 @@ E6:
       name: 72Hz Locked
   default: "1"
 6F:
+  unique_id: os_unlocked_framerate_50hz
   name: Unlocked Frame Rate [50Hz]
   group: Output Setup
   permission:
@@ -1282,6 +1358,7 @@ E6:
     - 75
   default: "50.00"
 4F:
+  unique_id: os_border_level
   name: Border Level
   group: Output Setup
   permission:
@@ -1292,6 +1369,7 @@ E6:
     - 100
   default: "0"
 C4:
+  unique_id: os_output_picture_controls_presets
   name: Output Picture Controls Presets
   group: Output Setup
   permission:
@@ -1311,6 +1389,7 @@ C4:
   compatibility:
     - vp50pro
 C0:
+  unique_id: os_output_picture_controls_brightness
   name: Output Picture Controls Brightness
   group: Output Setup
   permission:
@@ -1322,6 +1401,7 @@ C0:
   compatibility:
     - vp50pro
 C1:
+  unique_id: os_output_picture_controls_contrast
   name: Output Picture Controls Contrast
   group: Output Setup
   permission:
@@ -1333,6 +1413,7 @@ C1:
   compatibility:
     - vp50pro
 C2:
+  unique_id: os_output_picture_controls_saturation
   name: Output Picture Controls Saturation
   group: Output Setup
   permission:
@@ -1344,6 +1425,7 @@ C2:
   compatibility:
     - vp50pro
 C3:
+  unique_id: os_output_picture_controls_hue
   name: Output Picture Controls Hue
   group: Output Setup
   permission:
@@ -1355,6 +1437,7 @@ C3:
   compatibility:
     - vp50pro
 EA:
+  unique_id: os_hdcp_display_detect
   name: HDCP Display Detect
   group: Output Setup
   permission:
@@ -1367,6 +1450,7 @@ EA:
       name: "On"
   default: "1"
 C7:
+  unique_id: os_12v_trigger_2
   name: "12V Trigger #2"
   group: Output Setup
   permission:
@@ -1383,6 +1467,7 @@ C7:
   compatibility:
     - vp50pro
 BA:
+  unique_id: os_audio_select
   name: Audio Select
   group: Output Setup
   permission:
@@ -1396,6 +1481,7 @@ BA:
   compatibility:
     - vp50pro
 E0:
+  unique_id: os_display_profile
   name: Display Profile
   group: Output Setup
   permission:
@@ -1430,6 +1516,7 @@ E0:
     - vp50
     - vp50pro
 E7:
+  unique_id: os_auto_display_profile
   name: Auto Display Profile
   group: Output Setup
   permission:
@@ -1446,6 +1533,7 @@ E7:
     - vp50
     - vp50pro
 A1:
+  unique_id: mc_power
   name: Power
   group: Miscellaneous Controls
   permission:
@@ -1458,6 +1546,7 @@ A1:
       name: "On"
   default: "1"
 A2:
+  unique_id: mc_menu_navigation
   name: Menu Navigation
   group: Miscellaneous Controls
   permission:
@@ -1478,6 +1567,7 @@ A2:
     "7":
       name: Exit
 A4:
+  unique_id: mc_curtain_control
   name: Curtain Control
   group: Miscellaneous Controls
   permission:
@@ -1490,6 +1580,7 @@ A4:
       name: Curtain Close
   default: "0"
 A8:
+  unique_id: mc_product_name
   name: Product Name
   group: Miscellaneous Controls
   range:
@@ -1504,11 +1595,13 @@ A8:
   permission:
     - r
 A9:
+  unique_id: mc_software_version
   name: Software Version
   group: Miscellaneous Controls
   permission:
     - r
 AE:
+  unique_id: mc_system_reset
   name: System Reset
   group: Miscellaneous Controls
   permission:

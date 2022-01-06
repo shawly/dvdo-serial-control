@@ -1,1 +1,2 @@
-daiquiri==3.0.1
+loguru==0.5.3
+paho-mqtt==1.6.1
