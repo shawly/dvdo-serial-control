@@ -1,6 +1,6 @@
 import unittest
 
-from dvdo.packet import ErrorPacket, PacketFactory, ReplyPacket, ResponsePacket
+from dvdo.packet_handler import ErrorPacket, PacketFactory, ReplyPacket, ResponsePacket
 
 
 class TestPacketFactory(unittest.TestCase):
