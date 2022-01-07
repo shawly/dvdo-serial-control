@@ -1,7 +1,7 @@
-from dvdo.serial.config import Device
-from dvdo.serial.constants import ETX
-from dvdo.serial.packet_handler import Packet, PacketFactory
-from dvdo.serial.helpers import logger
+from dvdosc.config import Device
+from dvdosc.constants import ETX
+from dvdosc.serial.packet_factory import Packet, PacketFactory
+from dvdosc.helpers import logger
 from serial import Serial
 
 

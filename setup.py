@@ -9,7 +9,7 @@ with open("LICENSE") as f:
     license = f.read()
 
 setup(
-    name="dvdo-serial-control",
+    name="dvdosc",
     version="0.1.0",
     description="Application to control DVDO iScan video processors through an RS232 serial connection.",
     long_description=readme,

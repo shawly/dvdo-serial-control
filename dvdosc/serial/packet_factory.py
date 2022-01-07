@@ -1,4 +1,4 @@
-from dvdo.serial.constants import (
+from dvdosc.constants import (
     ETX,
     NULL,
     STX,
@@ -9,7 +9,7 @@ from dvdo.serial.constants import (
     TYPE_RESPONSE_PACKET,
     UNDERSCORE,
 )
-from dvdo.serial.helpers import (
+from dvdosc.helpers import (
     error_matcher,
     errors_dict,
     hex_matcher,
@@ -155,7 +155,7 @@ class ErrorPacket(Packet):
     def __init__(self, error_code, data_count, checksum):
         self.error_code = error_code
         try:
-            self.error_description = errors_dict[error_code]['name']
+            self.error_description = errors_dict[error_code]["name"]
         except KeyError:
             self.error_description = "unknown"
 
