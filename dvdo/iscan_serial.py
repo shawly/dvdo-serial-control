@@ -39,7 +39,7 @@ class IScanSerial:
             logger.info("Received packet: {packet}", packet=packet)
             return packet
         else:
-            logger.error("Timeout while receiving packet...")
+            logger.error("Timeout while waiting for packet...")
             return None
 
     def send_and_wait_for_response(self, packet: Packet) -> Packet:
