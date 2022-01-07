@@ -9,5 +9,14 @@ devices:
     baudrate: 57600
     timeout: 5
 
+mqtt:
+  server: "homeassistant"
+  port: 1883
+  auth: true
+  username: dvdo
+  password: changeme
+  client_id: "2d2b7875-4b3f-41e6-846c-513a114ef442"
+  discovery_topic: "homeassistant"
+
 logging:
   level: debug

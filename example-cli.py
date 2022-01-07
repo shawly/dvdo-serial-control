@@ -3,10 +3,10 @@
 import argparse
 import sys
 
-from dvdo.config import configuration
-from dvdo.packet_handler import ErrorPacket, PacketFactory, ReplyPacket, ResponsePacket
-from dvdo.iscan_serial import IScanSerial
-from dvdo.helpers import logger
+from dvdo.serial.config import configuration
+from dvdo.serial.packet_handler import ErrorPacket, PacketFactory, ReplyPacket, ResponsePacket
+from dvdo.serial.iscan_serial import IScanSerial
+from dvdo.serial.helpers import logger
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

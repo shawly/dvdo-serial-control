@@ -1,4 +1,4 @@
-from dvdo.constants import (
+from dvdo.serial.constants import (
     ETX,
     NULL,
     STX,
@@ -9,7 +9,7 @@ from dvdo.constants import (
     TYPE_RESPONSE_PACKET,
     UNDERSCORE,
 )
-from dvdo.helpers import (
+from dvdo.serial.helpers import (
     error_matcher,
     errors_dict,
     hex_matcher,

@@ -4,19 +4,16 @@ import sys
 import yaml
 from loguru import logger
 
-from dvdo.config import configuration
+from dvdo.serial.config import configuration
+from pkg_resources import resource_string, resource_filename
 
 # Initialize logger
 logger.remove()
 logger.add(sys.stderr, level=configuration.logging.level.upper())
 
 # Load dictionaries
-settings_dict = yaml.safe_load(
-    open("data/settings_dict_{lang}.yaml".format(lang=configuration.language))
-)
-errors_dict = yaml.safe_load(
-    open("data/errors_dict_{lang}.yaml".format(lang=configuration.language))
-)
+settings_dict = yaml.safe_load(resource_string('dvdo.resources', "settings_dict_{lang}.yaml".format(lang=configuration.language)))
+errors_dict = yaml.safe_load(resource_string('dvdo.resources', "errors_dict_{lang}.yaml".format(lang=configuration.language)))
 
 # Regex patterns for parsing responses (works better than calculating byte
 # lengths as responses sometimes contain the wrong data count)
